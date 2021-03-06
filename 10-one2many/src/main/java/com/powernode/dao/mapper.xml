@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.powernode.dao.ICountryDao">
+    <resultMap id="countryMapper" type="Country">
+        <id column="cid" property="cid"/>
+        <result column="cname" property="cname"/>
+        <collection property="ministers" ofType="Minister">
+            <id column="mid" property="mid"/>
+            <result column="mname" property="mname"/>
+        </collection>
+    </resultMap>
+    <select id="selectCountryById" resultMap="countryMapper">
+        select cid, cname, mid, mname
+        from country, minister
+        where country_id = cid
+        and cid = #{cid}
+    </select>
+</mapper>

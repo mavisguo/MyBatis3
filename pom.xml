@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.powernode</groupId>
+    <artifactId>MyBatis3</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>01-primary</module>
+        <module>02-primary-2</module>
+        <module>03-crud</module>
+        <module>04-property-column-unsame</module>
+        <module>05-property-column-unsame-2</module>
+        <module>06-mapper-dynamic-proxy</module>
+        <module>07-select-by-map</module>
+        <module>08-select-by-condition</module>
+        <module>09-dynamic-sql</module>
+        <module>10-one2many</module>
+        <module>11-one2many-2</module>
+        <module>12-many2one</module>
+        <module>13-many2one-2</module>
+        <module>14-oneself-one2many</module>
+        <module>15-oneself-one2many-2</module>
+        <module>16-oneself-many2one</module>
+        <module>17-many2many</module>
+        <module>18-lazy-load</module>
+        <module>19-sqlsession-cache</module>
+        <module>20-second-level-cache-buildin</module>
+        <module>21-second-level-cache-ehcache</module>
+        <module>22-annotation</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.caches</groupId>
+            <artifactId>mybatis-ehcache</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
